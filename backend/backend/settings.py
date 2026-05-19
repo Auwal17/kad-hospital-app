@@ -85,8 +85,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # TEMPORARY HACK: Plug local laptop into Render's cloud database
 DATABASES = {
     'default': dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
-        conn_max_age=600
+        default="postgresql://kad_hospita_db_user:k2KDatrH1U9uNvVIObLFR1JFReW18suX@dpg-d866h2pkh4rs73ci13ag-a.oregon-postgres.render.com/kad_hospita_db"
     )
 }
 
