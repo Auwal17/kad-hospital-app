@@ -82,6 +82,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Database
 # This tells Django: "If we are on Render, use the live PostgreSQL database. Otherwise, use SQLite."
+# TEMPORARY HACK: Plug local laptop into Render's cloud database
 DATABASES = {
     'default': dj_database_url.config(
         default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
